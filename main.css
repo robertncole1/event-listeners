@@ -1,9 +1,15 @@
 body {
-  background-color: purple;
+  background-color: grey;
 }
 
 .img-container {
   height: 200px;
   background-size: cover;
   background-position: center;
+}
+
+form {
+  text-align: left;
+  width: 50%;
+  margin: auto;
 }
