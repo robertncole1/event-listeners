@@ -103,7 +103,7 @@ const handleButtonClick = (e) => {
     document.querySelector('body').style.backgroundColor = '#808080';
   } else if (buttonId === 'All') {
     // default
-    document.querySelector('body').style.backgroundColor = 'green';
+    document.querySelector('body').style.backgroundColor = '#dbdbdb';
   }
 
   // UPDATE THE PIES BASED ON BUTTON CLICKED
