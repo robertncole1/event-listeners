@@ -121,11 +121,38 @@ const handleButtonClick = (e) => {
   }
 }
 
+const getFormInfo = (e) => {
+  e.preventDefault();
+    const name = document.querySelector('#name').value;
+    const ingredients = document.querySelector('#ingredients').value;
+    const bakeTemp = document.querySelector('#bakeTemp').value;
+    const drinkPairing = document.querySelector('#drinkPairing').value;
+    const imageUrl = document.querySelector('#imageUrl').value;
+    const instructor = document.querySelector('#instructor').value;
+    const iceCream = document.querySelector('#iceCream').value;
+
+    const obj = {
+      name,
+      bakeTemp,
+      ingredients,
+      drinkPairing,
+      imageUrl,
+      instructor,
+      iceCream,
+    }
+
+  pies.push(obj);
+  pieBuilder(pies);
+
+  document.querySelector('form').reset();
+}
+
 const buttonEvents = () => {
   document.querySelector('#All').addEventListener('click', handleButtonClick);
   document.querySelector('#Doc').addEventListener('click', handleButtonClick);
   document.querySelector('#Aja').addEventListener('click', handleButtonClick);
   document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
+  document.querySelector('form').addEventListener('submit', getFormInfo);
 }
 
 const init = () => {
